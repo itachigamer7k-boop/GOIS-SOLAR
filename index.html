@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOIS SOLAR SISTEMAS - Energia Solar para sua Casa ou Empresa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset e Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Cabeçalho */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        /* Logo GOIS SOLAR SISTEMAS com G estilizado */
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo-text {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #1a5f23;
+            position: relative;
+            letter-spacing: -1px;
+        }
+        
+        /* Estilização da letra G com tracinhos */
+        .logo-g {
+            display: inline-block;
+            position: relative;
+            color: #1a5f23;
+        }
+        
+        .logo-g::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, 
+                transparent 15%, 
+                #fff 15%, 
+                #fff 20%, 
+                transparent 20%,
+                transparent 40%,
+                #fff 40%,
+                #fff 45%,
+                transparent 45%,
+                transparent 65%,
+                #fff 65%,
+                #fff 70%,
+                transparent 70%
+            );
+            pointer-events: none;
+        }
+        
+        .logo-solar {
+            color: #f8c425;
+        }
+        
+        .logo-sistemas {
+            color: #1a5f23;
+            font-weight: 700;
+        }
+        
+        /* Menu de Navegação */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: #1a5f23;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: #f8c425;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        /* Banner Principal */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        .hero h1 .logo-g-hero {
+            color: #fff;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero h1 .logo-g-hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, 
+                transparent 15%, 
+                transparent 15%, 
+                #1a5f23 15%, 
+                #1a5f23 20%, 
+                transparent 20%,
+                transparent 40%,
+                #1a5f23 40%,
+                #1a5f23 45%,
+                transparent 45%,
+                transparent 65%,
+                #1a5f23 65%,
+                #1a5f23 70%,
+                transparent 70%
+            );
+            pointer-events: none;
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: #f0f0f0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #f8c425;
+            color: #333;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: 2px solid #f8c425;
+        }
+        
+        .btn:hover {
+            background-color: transparent;
+            color: #f8c425;
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: #f8c425;
+            border: 2px solid #f8c425;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #f8c425;
+            color: #333;
+        }
+        
+        /* Seção de Sistemas */
+        .systems {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #1a5f23;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .systems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .system-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        
+        .system-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .system-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #f8c425;
+            color: #333;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            z-index: 2;
+        }
+        
+        .system-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .system-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .system-card:hover .system-image img {
+            transform: scale(1.05);
+        }
+        
+        .system-content {
+            padding: 25px;
+        }
+        
+        .system-content h3 {
+            color: #1a5f23;
+            margin-bottom: 10px;
+            font-size: 1.6rem;
+        }
+        
+        .system-power {
+            display: inline-block;
+            background-color: #1a5f23;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .system-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .system-features li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .system-features li i {
+            color: #f8c425;
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .system-price {
+            text-align: center;
+            border-top: 1px dashed #ddd;
+            padding-top: 20px;
+        }
+        
+        .price {
+            font-size: 2rem;
+            color: #1a5f23;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+        
+        .price-note {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Seção de Serviços */
+        .services {
+            padding: 80px 0;
+            background-color: #f0f7f1;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            background-color: #1a5f23;
+            color: white;
+            font-size: 2.5rem;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            color: #1a5f23;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        /* Seção de Benefícios */
+        .benefits {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        
+        .benefits-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .benefit-icon {
+            background-color: #1a5f23;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        
+        .benefit-content h3 {
+            color: #1a5f23;
+            margin-bottom: 10px;
+        }
+        
+        /* Seção Contato */
+        .contact {
+            padding: 80px 0;
+            background-color: #f0f7f1;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            color: #1a5f23;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-detail i {
+            background-color: #f8c425;
+            color: #333;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .contact-form button {
+            background-color: #1a5f23;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .contact-form button:hover {
+            background-color: #134419;
+        }
+        
+        /* Rodapé */
+        footer {
+            background-color: #1a5f23;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo .logo-text {
+            color: white;
+        }
+        
+        .footer-logo .logo-g::after {
+            background: linear-gradient(to bottom, 
+                transparent 15%, 
+                #1a5f23 15%, 
+                #1a5f23 20%, 
+                transparent 20%,
+                transparent 40%,
+                #1a5f23 40%,
+                #1a5f23 45%,
+                transparent 45%,
+                transparent 65%,
+                #1a5f23 65%,
+                #1a5f23 70%,
+                transparent 70%
+            );
+        }
+        
+        .footer-logo .logo-solar {
+            color: #f8c425;
+        }
+        
+        .footer-logo .logo-sistemas {
+            color: white;
+        }
+        
+        .footer-links h4,
+        .footer-contact h4 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links ul li a:hover {
+            color: #f8c425;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .logo-text {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            .logo {
+                margin-bottom: 20px;
+            }
+            
+            nav ul li {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .systems-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+        
+        @media (max-width: 576px) {
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .services-grid,
+            .systems-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo-text {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho com Logo e Navegação -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <div class="logo-text">
+                    <span class="logo-g">G</span><span class="logo-solar">OIS SOLAR</span> <span class="logo-sistemas">SISTEMAS</span>
+                </div>
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sistemas">Sistemas</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#beneficios">Benefícios</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h1><span class="logo-g-hero">G</span>OIS SOLAR <span style="color: #fff;">SISTEMAS</span></h1>
+            <p>Soluções completas em energia solar para sua casa ou empresa. Sistemas de 500W a 1500W com a melhor relação custo-benefício do mercado.</p>
+            <a href="#sistemas" class="btn" style="margin-right: 15px;">Ver Sistemas</a>
+            <a href="#contato" class="btn btn-secondary">Solicitar Orçamento</a>
+        </div>
+    </section>
+
+    <!-- Seção de Sistemas -->
+    <section class="systems" id="sistemas">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Sistemas Solares</h2>
+                <p>Escolha o sistema ideal para suas necessidades. Todos incluem instalação e garantia de 25 anos.</p>
+            </div>
+            
+            <div class="systems-grid">
+                <!-- Sistema 500W -->
+                <div class="system-card">
+                    <div class="system-badge">MAIS VENDIDO</div>
+                    <div class="system-image">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sistema Solar 500W">
+                    </div>
+                    <div class="system-content">
+                        <h3>Sistema Residencial Básico</h3>
+                        <div class="system-power">500W</div>
+                        <p>Ideal para casas pequenas ou consumo básico. Economize até 40% na sua conta de luz.</p>
+                        
+                        <ul class="system-features">
+                            <li><i class="fas fa-check"></i> 2 Painéis Solares de 250W</li>
+                            <li><i class="fas fa-check"></i> Inversor de 600W</li>
+                            <li><i class="fas fa-check"></i> Suporte para telhado</li>
+                            <li><i class="fas fa-check"></i> Cabos e conectores</li>
+                            <li><i class="fas fa-check"></i> Instalação incluída</li>
+                        </ul>
+                        
+                        <div class="system-price">
+                            <div class="price">R$ 4.299</div>
+                            <div class="price-note">ou 12x de R$ 398</div>
+                            <a href="#contato" class="btn" style="padding: 10px 25px; font-size: 1rem;">Comprar Agora</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sistema 800W -->
+                <div class="system-card">
+                    <div class="system-badge">POPULAR</div>
+                    <div class="system-image">
+                        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sistema Solar 800W">
+                    </div>
+                    <div class="system-content">
+                        <h3>Sistema Residencial Standard</h3>
+                        <div class="system-power">800W</div>
+                        <p>Perfeito para famílias de até 3 pessoas. Redução média de 60% na conta de energia.</p>
+                        
+                        <ul class="system-features">
+                            <li><i class="fas fa-check"></i> 4 Painéis Solares de 200W</li>
+                            <li><i class="fas fa-check"></i> Inversor de 1000W</li>
+                            <li><i class="fas fa-check"></i> Estrutura de fixação</li>
+                            <li><i class="fas fa-check"></i> String box completa</li>
+                            <li><i class="fas fa-check"></i> Instalação profissional</li>
+                        </ul>
+                        
+                        <div class="system-price">
+                            <div class="price">R$ 6.899</div>
+                            <div class="price-note">ou 12x de R$ 642</div>
+                            <a href="#contato" class="btn" style="padding: 10px 25px; font-size: 1rem;">Comprar Agora</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sistema 1000W -->
+                <div class="system-card">
+                    <div class="system-badge">RECOMENDADO</div>
+                    <div class="system-image">
+                        <img src="https://images.unsplash.com/photo-1542332213-9b5a5a3f9854?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sistema Solar 1000W">
+                    </div>
+                    <div class="system-content">
+                        <h3>Sistema Residencial Premium</h3>
+                        <div class="system-power">1000W</div>
+                        <p>Para residências médias com alto consumo. Economia de até 75% na conta de luz.</p>
+                        
+                        <ul class="system-features">
+                            <li><i class="fas fa-check"></i> 5 Painéis Solares de 200W</li>
+                            <li><i class="fas fa-check"></i> Inversor de 1200W</li>
+                            <li><i class="fas fa-check"></i> Monitoramento online</li>
+                            <li><i class="fas fa-check"></i> Sistema anti-ilhamento</li>
+                            <li><i class="fas fa-check"></i> Instalação completa</li>
+                        </ul>
+                        
+                        <div class="system-price">
+                            <div class="price">R$ 8.499</div>
+                            <div class="price-note">ou 12x de R$ 788</div>
+                            <a href="#contato" class="btn" style="padding: 10px 25px; font-size: 1rem;">Comprar Agora</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sistema 1500W -->
+                <div class="system-card">
+                    <div class="system-badge">MELHOR CUSTO-BENEFÍCIO</div>
+                    <div class="system-image">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sistema Solar 1500W">
+                    </div>
+                    <div class="system-content">
+                        <h3>Sistema Residencial Max</h3>
+                        <div class="system-power">1500W</div>
+                        <p>Para famílias grandes ou casas com piscina. Economize até 90% na sua conta.</p>
+                        
+                        <ul class="system-features">
+                            <li><i class="fas fa-check"></i> 6 Painéis Solares de 250W</li>
+                            <li><i class="fas fa-check"></i> Inversor de 1800W</li>
+                            <li><i class="fas fa-check"></i> Aplicativo de monitoramento</li>
+                            <li><i class="fas fa-check"></i> Garantia estendida</li>
+                            <li><i class="fas fa-check"></i> Manutenção por 1 ano</li>
+                        </ul>
+                        
+                        <div class="system-price">
+                            <div class="price">R$ 11.999</div>
+                            <div class="price-note">ou 12x de R$ 1.112</div>
+                            <a href="#contato" class="btn" style="padding: 10px 25px; font-size: 1rem;">Comprar Agora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center;">
+                <p style="color: #666; margin-top: 20px;">*Preços podem variar de acordo com a complexidade da instalação. Consulte condições especiais para pagamento à vista.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Serviços -->
+    <section class="services" id="servicos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Serviços</h2>
+                <p>Além da venda de sistemas, oferecemos serviços completos em energia solar.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Projeto Personalizado</h3>
+                        <p>Desenvolvemos projetos sob medida para sua residência ou empresa, considerando seu consumo e estrutura.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Manutenção</h3>
+                        <p>Serviços de limpeza, verificação e manutenção preventiva para garantir o máximo desempenho do seu sistema.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Regularização</h3>
+                        <p>Curamos de toda a burocracia junto à concessionária de energia para legalização do seu sistema.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Benefícios -->
+    <section class="benefits" id="beneficios">
+        <div class="container">
+            <div class="section-title">
+                <h2>Vantagens da Energia Solar</h2>
+                <p>Descubra por que milhares de brasileiros já adotaram a energia solar</p>
+            </div>
+            
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Economia Financeira</h3>
+                        <p>Redução de até 95% na conta de energia elétrica. Retorno do investimento em média de 3 a 5 anos.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Sustentabilidade</h3>
+                        <p>Energia 100% limpa e renovável, contribuindo para a preservação do meio ambiente e redução da pegada de carbono.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Valorização do Imóvel</h3>
+                        <p>Propriedades com energia solar valem até 10% mais no mercado imobiliário.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Independência Energética</h3>
+                        <p>Proteção contra aumentos nas tarifas de energia e blecautes. Produza sua própria energia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <div class="section-title">
+                <h2>Entre em Contato</h2>
+                <p>Solicite um orçamento sem compromisso ou tire suas dúvidas sobre nossos sistemas.</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Fale Conosco</h3>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p><strong>Endereço:</strong> Av. das Energias Renováveis, 1234</p>
+                                <p>São Paulo - SP</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <p><strong>Telefone:</strong> (11) 5555-1234</p>
+                                <p><strong>WhatsApp:</strong> (11) 99999-5678</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <p><strong>E-mail:</strong> contato@goissolarsistemas.com.br</p>
+                                <p><strong>Horário:</strong> Seg-Sex: 8h-18h | Sáb: 9h-13h</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-media">
+                        <h3>Siga-nos</h3>
+                        <div style="display: flex; gap: 15px; margin-top: 10px;">
+                            <a href="#" style="color: #1a5f23; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+                            <a href="#" style="color: #1a5f23; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                            <a href="#" style="color: #1a5f23; font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" style="color: #1a5f23; font-size: 1.5rem;"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="form-contato">
+                        <input type="text" name="nome" placeholder="Seu Nome" required>
+                        <input type="email" name="email" placeholder="Seu E-mail" required>
+                        <input type="tel" name="telefone" placeholder="Seu Telefone" required>
+                        <select name="sistema" style="width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                            <option value="">Interesse em qual sistema?</option>
+                            <option value="500w">Sistema 500W</option>
+                            <option value="800w">Sistema 800W</option>
+                            <option value="1000w">Sistema 1000W</option>
+                            <option value="1500w">Sistema 1500W</option>
+                            <option value="outro">Outro sistema</option>
+                        </select>
+                        <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <div class="logo-text">
+                        <span class="logo-g">G</span><span class="logo-solar">OIS SOLAR</span> <span class="logo-sistemas">SISTEMAS</span>
+                    </div>
+                    <p style="margin-top: 15px; color: #ddd;">Energia limpa para um futuro sustentável. Trabalhamos com as melhores marcas e tecnologia de ponta.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sistemas">Sistemas</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#beneficios">Benefícios</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-phone" style="margin-right: 10px;"></i> (11) 5555-1234</p>
+                    <p><i class="fas fa-envelope" style="margin-right: 10px;"></i> contato@goissolarsistemas.com.br</p>
+                    <p><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> São Paulo - SP</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 GOIS SOLAR SISTEMAS. Todos os direitos reservados. | Desenvolvido com ♥ para um futuro sustentável</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handling
+        document.getElementById('form-contato').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const sistema = this.querySelector('select[name="sistema"]').value;
+            let mensagem = 'Obrigado pelo seu contato!';
+            
+            if (sistema) {
+                const sistemas = {
+                    '500w': 'Sistema 500W',
+                    '800w': 'Sistema 800W', 
+                    '1000w': 'Sistema 1000W',
+                    '1500w': 'Sistema 1500W',
+                    'outro': 'Outro sistema'
+                };
+                mensagem = `Obrigado pelo seu interesse no ${sistemas[sistema]}! Entraremos em contato em breve para fornecer um orçamento personalizado.`;
+            } else {
+                mensagem = 'Obrigado pelo seu contato! Entraremos em contato em breve.';
+            }
+            
+            alert(mensagem);
+            this.reset();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Destaque para o card mais vendido
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.system-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.15)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
